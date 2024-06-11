@@ -41,3 +41,16 @@ console.log(Object.entries(myObj2)); // it just forms a key value pair into a se
 
 // we also have an important method that returns whether our object has a particular property or not
 console.log(Object.hasOwnProperty('name'));
+
+// now we will discuss destructuring of objects
+const course={
+    name:"js-course",
+    price:999,
+    instructor:"Aryan",
+}
+
+// now we can access properties and turn them into variables through destructuring
+const {instructor}=course;
+console.log(instructor);
+
+// when api call is made then we receive in form of json(javascript object notation) 
