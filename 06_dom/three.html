@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom structure</title>
+</head>
+<body style="background-color: #212121;color: #fff;">
+    
+</body>
+<script>
+    // this shows how to add an element in an document
+    const div=document.createElement("div")
+    console.log(div);
+    div.className="main" //you can give the classname of your choice
+    div.id=Math.round(Math.random()*10 +1) // you can give the id 
+    div.setAttribute("title","this is the title")// you can also give the attribute
+    div.style.backgroundColor="green"
+    // div.innerText="lorem ipsum etnet korem" this is one way lets see other way
+    const addText=document.createTextNode("lorem kapsu korem padddu")
+    div.appendChild(addText)
+
+    // now we will attach this div with the document
+    document.body.appendChild(div)
+</script>
+</html>
