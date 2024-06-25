@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Aryan baba ki jai</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //lets see some of the impprtant functions here 
+    // first is the setTimeout() it takes a callback and time in ms , the function gets executed once after the required time mentioned 
+    setTimeout(()=>{
+        console.log("ryan bhala mori rama")
+    },2000)
+    // we can also use setInterval but there the function is continuously executed after the fixed time
+
+    const changeText=()=>{
+        document.querySelector("h1").innerHTML="sabka maalik ek hi!!";
+    }
+
+    setTimeout(changeText,2000);// see here we gave instance of the function we didn't use pparanthesis
+
+    // if you want to stop the execution of the setTimeout then also we have clearTimeout
+    // the clearTimeout takes the instance the setTimeout that u want to stop
+    // basically just store the setTimeout in const variable and give it
+    const rome=setTimeout(()=>{
+        console.log("Romeo aur juliet ne bhut saari batein ki ek dusre se");
+    },3000);
+
+    // we will apply this clearTimeout using a event listener
+    document.querySelector("#stop").addEventListener('click',()=>{
+        clearTimeout(rome);
+        console.log("romeo k0 rok dia humne!!!");
+    })
+</script>
+</html>
